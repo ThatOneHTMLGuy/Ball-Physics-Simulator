@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Ball Physics Simulation</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+   
+<!-- ==========================================
+     SETTINGS BUTTON
+     ========================================== -->
+
+<button
+  id="settingsBtn"
+  aria-label="Settings"
+>
+  <img
+    src="images/settings.png"
+    alt="Settings"
+  >
+</button>
+
+
+  <!-- ==========================================
+       CANVAS
+       ========================================== -->
+
+  <div id="canvasWrapper">
+
+    <canvas id="ballCanvas"></canvas>
+
+  </div>
+
+
+  <!-- ==========================================
+       GAME CONTROLS
+       ========================================== -->
+
+  <div id="controls">
+
+    <button id="resetBtn">
+      Reset
+    </button>
+
+    <button id="modesBtn">
+      Mode: Normal
+    </button>
+
+  </div>
+
+
+  <!-- ==========================================
+       MODE SELECT POPUP
+       ========================================== -->
+
+  <div
+    id="modeOverlay"
+    class="popup-overlay"
+  >
+
+    <div
+      id="modePopup"
+      class="mode-popup"
+    >
+
+      <button
+        id="closeModePopup"
+        class="popup-close"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <h2>
+        Select Mode
+      </h2>
+
+
+      <div class="mode-list">
+
+
+        <!-- ======================================
+             NORMAL
+             ====================================== -->
+
+        <button
+          class="mode-option selected"
+          data-mode="normal"
+        >
+
+
+          <div class="mode-info">
+
+            <strong>
+              Normal
+            </strong>
+
+            <span>
+              Classic bouncing ball
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ======================================
+             SHRINKING WORLD
+             ====================================== -->
+
+        <button
+          class="mode-option"
+          data-mode="shrinking"
+        >
+
+
+          <div class="mode-info">
+
+            <strong>
+              Shrinking World
+            </strong>
+
+            <span>
+              The border shrinks everytime the ball touches the border
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ======================================
+             ESCAPE LOOP
+             ====================================== -->
+
+        <button
+          class="mode-option"
+          data-mode="escape"
+        >
+
+
+
+          <div class="mode-info">
+
+            <strong>
+              Escape Loop
+            </strong>
+
+            <span>
+              +2 balls each escape
+            </span>
+
+          </div>
+
+        </button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       SETTINGS POPUP
+       ========================================== -->
+
+  <div
+    id="settingsOverlay"
+    class="popup-overlay"
+  >
+
+    <div
+      id="settingsPopup"
+      class="settings-popup"
+    >
+
+      <button
+        id="closeSettingsBtn"
+        class="popup-close"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <h2>
+        Settings
+      </h2>
+
+
+      <!-- THEME -->
+
+      <div class="setting-section">
+
+        <h3>
+          Theme
+        </h3>
+
+
+        <div class="theme-buttons">
+
+          <button
+            id="lightModeBtn"
+            class="theme-button"
+          >
+            Light
+          </button>
+
+
+          <button
+            id="darkModeBtn"
+            class="theme-button"
+          >
+            Dark
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- BALL SIZE -->
+
+      <div class="setting-section">
+
+        <h3>
+          Ball Size
+        </h3>
+
+
+        <input
+          id="ballSizeSlider"
+          type="range"
+          min="10"
+          max="100"
+          value="30"
+          step="1"
+        >
+
+
+        <div
+          id="ballSizeValue"
+          class="slider-value"
+        >
+          30 px
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       MAIN JAVASCRIPT
+       ========================================== -->
+
+  <script
+    type="module"
+    src="js/main.js"
+  ></script>
+
+
+</body>
+
+</html>
