@@ -70,6 +70,9 @@ Use the available interface buttons and settings to:
 - # Change the theme.
 - # Reset the simulator.
 
+# [🔴 Live Demo](https://thatonehtmlguy.github.io/Ball-Physics-Simulator/)
+
+
 ## Project Structure
 
 ```text
